@@ -48,3 +48,5 @@ Frontend akan berjalan di http://localhost:5173
 n8n start
 
 Akses aplikasi di browser, lalu lakukan uji upload video. 
+
+lik onedrive: https://mikroskilacid-my.sharepoint.com/:f:/g/personal/221110278_students_mikroskil_ac_id/Ep0PWJmf2gtMvihNjCJ-QaABrUIFJ9fifW7kGsIG1R--5A?e=HC19yJ
