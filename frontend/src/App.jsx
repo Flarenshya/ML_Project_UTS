@@ -6,19 +6,48 @@ function App() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
+  const [sentiment, setSentiment] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  // Validasi email
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
 
   const handleUpload = async () => {
-    const formData = new FormData();
-    formData.append("video", video);
-    formData.append("title", title);
-    formData.append("description", description);
-    formData.append("email", email);
-    formData.append("phone", phone);
+    // Validasi semua field
+    if (!video || !title.trim() || !description.trim() || !email.trim()) {
+      alert("Please fill in all fields and choose a video!");
+      return;
+    }
 
-    await axios.post("http://localhost:4000/api/upload", formData, {
-      headers: { "Content-Type": "multipart/form-data" },
-    });
+    if (!validateEmail(email)) {
+      alert("Please enter a valid email address!");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const formData = new FormData();
+      formData.append("video", video);
+      formData.append("title", title);
+      formData.append("description", description);
+      formData.append("email", email);
+
+      const res = await axios.post("http://localhost:5000/upload", formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+
+      setSentiment(res.data.sentiment);
+      alert("Video uploaded successfully!");
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong!");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -32,28 +61,41 @@ function App() {
           <h1 className="text-6xl font-extrabold leading-none mb-7">
             <span className="text-white">smart</span>
             <br />
-            <span className="text-whitefont-bold">
-              uploader
-            </span>
+            <span className="text-whitefont-bold">uploader</span>
           </h1>
           <p className="italic text-lg text-blue-300 mb-3">
             AutoVid Connect — upload once, share everywhere.
           </p>
           <p className="text-gray-300 max-w-md leading-relaxed">
-            Automatically post your videos to YouTube and get instant
-            notifications via WhatsApp and email when it’s done.
+            Automatically post your videos to YouTube and get instant notifications via WhatsApp and email when it’s done.
           </p>
+          {sentiment && (
+            <p className="mt-4 text-white font-semibold text-lg">
+              Predicted Sentiment: {sentiment.toUpperCase()}
+            </p>
+          )}
         </div>
 
         {/* Right Section - Upload Form */}
         <div className="bg-white text-black rounded-3xl shadow-2xl p-8 w-full max-w-md mx-auto">
           <div className="flex items-center mb-5">
-            <label className="bg-[#0040ff] text-white font-medium py-2 px-10 rounded-full cursor-pointer hover:bg-blue-700">
+            <label className="bg-[#0040ff] text-white font-medium py-2 px-8 rounded-full cursor-pointer hover:bg-blue-700">
               Choose File
               <input
                 type="file"
-                onChange={(e) => setVideo(e.target.files[0])}
+                accept="video/mp4" // hanya boleh mp4
+                onChange={(e) => {
+                  const file = e.target.files[0];
+                  if (file && file.type !== "video/mp4") {
+                    alert("Only MP4 files are allowed!");
+                    e.target.value = null; // reset input
+                    setVideo(null);
+                    return;
+                  }
+                  setVideo(file);
+                }}
                 className="hidden"
+                required
               />
             </label>
             <span className="ml-3 text-gray-500 text-sm">
@@ -61,36 +103,36 @@ function App() {
             </span>
           </div>
 
+
           <input
             placeholder="Title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-             className="w-full p-3 mb-3 border border-gray-300 rounded-full focus:border-[#7a1eff] focus:ring-2 focus:ring-[#7a1eff] focus:outline-none"
+            required
+            className="w-full p-3 mb-3 border border-gray-300 rounded-full focus:border-[#7a1eff] focus:ring-2 focus:ring-[#7a1eff] focus:outline-none"
           />
           <input
             placeholder="Description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-             className="w-full p-3 mb-3 border border-gray-300 rounded-full focus:border-[#7a1eff] focus:ring-2 focus:ring-[#7a1eff] focus:outline-none"
+            required
+            className="w-full p-3 mb-3 border border-gray-300 rounded-full focus:border-[#7a1eff] focus:ring-2 focus:ring-[#7a1eff] focus:outline-none"
           />
           <input
             placeholder="Email"
+            type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-             className="w-full p-3 mb-3 border border-gray-300 rounded-full focus:border-[#7a1eff] focus:ring-2 focus:ring-[#7a1eff] focus:outline-none"
-          />
-          <input
-            placeholder="Phone"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-             className="w-full p-3 mb-5 border border-gray-300 rounded-full focus:border-[#7a1eff] focus:ring-2 focus:ring-[#7a1eff] focus:outline-none"
+            required
+            className="w-full p-3 mb-3 border border-gray-300 rounded-full focus:border-[#7a1eff] focus:ring-2 focus:ring-[#7a1eff] focus:outline-none"
           />
 
           <button
             onClick={handleUpload}
-            className="w-full bg-purple-600 text-white py-3 rounded-full font-semibold hover:bg-purple-700 transition"
+            disabled={loading}
+            className="w-full bg-purple-600 text-white py-3 rounded-full font-semibold hover:bg-purple-700 transition disabled:opacity-50"
           >
-            Upload File
+            {loading ? "Uploading..." : "Upload File"}
           </button>
         </div>
       </div>
