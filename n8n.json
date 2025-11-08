@@ -1,0 +1,58 @@
+{
+  "name": "Send Video Upload Notification",
+  "nodes": [
+    {
+      "type": "n8n-nodes-base.webhook",
+      "name": "Webhook Receive",
+      "position": [
+        250,
+        300
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "send_notification",
+        "responseMode": "onReceived",
+        "responseCode": 200,
+        "responseData": "firstIncomingItem",
+        "options": {}
+      },
+      "credentials": {}
+    },
+    {
+      "type": "n8n-nodes-base.emailSend",
+      "name": "Send Email",
+      "position": [
+        550,
+        300
+      ],
+      "parameters": {
+        "fromEmail": "smilingwoofie@gmail.com",
+        "toEmail": "={{ $json[\"email\"] }}",
+        "subject": "Video \"{{$json[\"title\"]}}\" Has Been Uploaded!",
+        "text": "Hello,\n\nYour video titled \"{{$json[\"title\"]}}\" has been uploaded to YouTube.\nLink: {{$json[\"youtube_link\"]}}\nSentiment: {{$json[\"sentiment\"]}}\n\nThank you for using SmartUploader.\n"
+      },
+      "credentials": {
+        "smtp": {
+          "id": "FOxASZpmVRkdOx8E",
+          "name": "SMTP Credentials"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Webhook Receive": {
+      "main": [
+        [
+          {
+            "node": "Send Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Email": {
+      "main": []
+    }
+  }
+}
