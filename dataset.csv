@@ -1,192 +1,198 @@
-title,description,label
-"Belajar Python Dasar","Video ini mengajarkan dasar Python dengan mudah dan menyenangkan.",positive
-"Tutorial Excel","Penjelasan jelas dan mudah dipahami, sangat membantu pemula.",positive
-"Vlog Liburan Bali","Pemandangan indah, pengalaman menyenangkan dan seru!",positive
-"Mukbang Ramen","Video lucu dan menghibur, saya sangat menikmatinya!",positive
-"Edukasi Biologi","Penjelasan mudah dimengerti, menyenangkan dan informatif.",positive
-"Panduan React","Video lengkap dan mudah dipahami, membuat belajar React jadi menyenangkan.",positive
-"Tutorial JavaScript","Materi lengkap, mudah diikuti, cocok untuk pemula.",positive
-"Panduan Machine Learning","Penjelasan mudah dipahami dan menyenangkan.",positive
-"Belajar SQL","Materi jelas dan sangat membantu proses belajar.",positive
-"Video Matematika","Video sangat bermanfaat dan mudah dipahami.",positive
-"Vlog Kota Yogyakarta","Suasana menyenangkan, seru, dan informatif.",positive
-"Mukbang Pizza","Konten menghibur dan membuat senang menonton.",positive
-"Tutorial CSS","Video mudah dimengerti, sangat membantu pemula.",positive
-"Belajar Java Dasar","Penjelasan jelas dan menyenangkan, cocok untuk belajar.",positive
-"Edukasi Fisika","Video mudah diikuti, materi jelas dan menyenangkan.",positive
-"Panduan Git","Video bermanfaat, sangat membantu memahami version control.",positive
-"Belajar Bahasa Inggris","Materi mudah dipahami dan menyenangkan.",positive
-"Vlog Kuliner Bandung","Menyenangkan, menghibur, dan sangat menarik.",positive
-"Tutorial Photoshop","Penjelasan mudah, konten menarik dan membantu.",positive
-"Video Kesehatan","Materi informatif dan mudah dimengerti, menyenangkan.",positive
-"Belajar Python Lanjutan","Video mengajarkan konsep lanjutan dengan cara mudah dimengerti.",positive
-"Mukbang Sushi","Sangat menyenangkan dan lucu, membuat senang menonton.",positive
-"Vlog Travel Lombok","Konten menyenangkan dan informatif, pengalaman seru.",positive
-"Tutorial Word","Materi jelas dan sangat membantu pemula.",positive
-"Panduan Statistik","Video mudah dimengerti, konten menarik dan bermanfaat.",positive
-"Video Sejarah","Materi jelas dan mudah dipahami, pengalaman belajar menyenangkan.",positive
-"Belajar Ekonomi","Penjelasan mudah dipahami dan bermanfaat untuk pemula.",positive
-"Mukbang Burger","Seru, lucu, dan sangat menghibur.",positive
-"Vlog Alam","Konten menyenangkan, pengalaman menarik, sangat seru.",positive
-"Tutorial Bahasa Jepang","Video jelas dan mudah dimengerti, bermanfaat.",positive
-"Edukasi Kimia","Materi mudah diikuti dan menyenangkan untuk belajar.",positive
-"Belajar Data Science","Penjelasan menyenangkan dan mudah dimengerti.",positive
-"Video Musik","Konten menyenangkan dan menghibur, sangat cocok untuk santai.",positive
-"Vlog Kuliner Jakarta","Video seru dan lucu, sangat menghibur.",positive
-"Mukbang Nasi Padang","Menyenangkan dan membuat senang menonton.",positive
-"Tutorial Figma","Materi jelas, mudah diikuti, cocok untuk pemula.",positive
-"Belajar CSS Lanjutan","Video jelas dan menyenangkan, sangat membantu belajar.",positive
-"Panduan React Hooks","Video membantu memahami konsep dengan cara mudah.",positive
-"Belajar Algoritma","Konten menarik dan menyenangkan, sangat membantu belajar.",positive
-"Vlog Pantai","Konten menyenangkan, pemandangan indah, pengalaman seru.",positive
-"Mukbang Ayam Goreng","Konten lucu, menyenangkan, menghibur.",positive
-"Edukasi Matematika","Materi mudah dipahami, sangat membantu belajar.",positive
-"Tutorial Illustrator","Video jelas, menyenangkan, mudah diikuti.",positive
-"Belajar Java Lanjutan","Materi jelas, mudah dipahami, menyenangkan untuk belajar.",positive
-"Vlog Hiking","Menyenangkan, pemandangan indah, pengalaman seru.",positive
-"Mukbang Kue","Konten menghibur dan menyenangkan, sangat lucu.",positive
-"Video Motivasi","Sangat inspiratif dan menyenangkan untuk ditonton.",positive
-"Tutorial SEO","Video bermanfaat, mudah dimengerti, sangat membantu.",positive
-"Belajar Statistik","Materi jelas, mudah diikuti, konten menyenangkan.",positive
-"Vlog Kuliner Malang","Video menyenangkan, sangat menghibur dan lucu.",positive
-"Mukbang Roti","Menyenangkan dan lucu, konten menghibur.",positive
-"Tutorial JavaScript Lanjutan","Materi jelas dan mudah dimengerti, sangat bermanfaat.",positive
-"Panduan Excel","Video membantu memahami materi dengan cara mudah dan menyenangkan.",positive
-"Belajar Python GUI","Penjelasan mudah dan menyenangkan, konten bermanfaat.",positive
-"Vlog Alam Bogor","Menyenangkan, pemandangan indah, pengalaman seru dan menghibur.",positive
-"Mukbang Seafood","Konten menyenangkan, sangat menghibur, lucu.",positive
-"Edukasi Bahasa Korea","Materi jelas, mudah dimengerti, sangat menyenangkan.",positive
-"Tutorial Canva","Video mudah dipahami, sangat membantu dan menyenangkan.",positive
-"Belajar PHP","Penjelasan mudah, konten menyenangkan dan bermanfaat.",positive
-"Vlog Kota Bandung","Menyenangkan, pengalaman seru, konten menarik.",positive
-"Mukbang Ice Cream","Sangat lucu, menghibur, dan menyenangkan.",positive
-"Tutorial Node.js","Materi jelas, mudah dipahami, konten menyenangkan dan bermanfaat.",positive
-"Panduan Python Flask","Video mudah diikuti, menyenangkan dan membantu belajar.",positive
-"Belajar R Programming","Penjelasan jelas, mudah dimengerti, menyenangkan.",positive
-"Video Kuliner","Konten lucu, menyenangkan, sangat menghibur.",positive
-"Vlog Pantai Bali","Menyenangkan, pemandangan indah, pengalaman seru.",positive
-"Mukbang Ayam Bakar","Konten menghibur dan menyenangkan, lucu.",positive
-"Tutorial Data Science Lanjutan","Materi jelas, mudah dipahami, sangat bermanfaat.",positive
-"Panduan Java Spring","Video jelas dan menyenangkan, sangat membantu belajar.",positive
-"Belajar React Native","Penjelasan mudah, menyenangkan, dan bermanfaat.",positive
-"Vlog Gunung","Menyenangkan, pemandangan indah, pengalaman seru.",positive
-"Mukbang Burger Cheese","Konten lucu, menyenangkan, menghibur.",positive
-"Edukasi Sejarah","Materi jelas, menyenangkan, dan sangat informatif.",positive
-"Tutorial GitHub","Video mudah diikuti, menyenangkan, sangat membantu.",positive
-"Belajar CSS Lanjutan","Penjelasan jelas, mudah dimengerti, menyenangkan.",positive
-"Vlog Kota Yogyakarta","Video biasa saja, memperlihatkan aktivitas sehari-hari.",neutral
-"Mukbang Nasi Padang","Video cukup informatif tapi tidak terlalu menarik.",neutral
-"Tutorial Word","Materi standar, cukup jelas tapi tidak spesial.",neutral
-"Panduan Fisika","Penjelasan video biasa saja, cukup membantu tapi tidak luar biasa.",neutral
-"Belajar Kimia","Video lumayan, beberapa bagian cukup jelas tapi tidak semuanya.",neutral
-"Video Sejarah","Materi cukup informatif tapi tidak ada yang istimewa.",neutral
-"Tutorial Excel","Materi cukup jelas, cocok untuk belajar tapi tidak menonjol.",neutral
-"Belajar Bahasa Inggris","Video standar, informasi dasar cukup membantu.",neutral
-"Panduan Statistik","Video biasa, cukup membantu memahami konsep dasar.",neutral
-"Tutorial CSS","Video lumayan, materi cukup jelas tapi tidak menarik.",neutral
-"Vlog Kota Bandung","Konten biasa, hanya merekam aktivitas harian.",neutral
-"Mukbang Ramen","Video biasa, cukup menghibur tapi tidak luar biasa.",neutral
-"Tutorial Java","Materi cukup standar, mudah diikuti tapi tidak spesial.",neutral
-"Belajar Python","Video biasa saja, cukup membantu untuk pemula.",neutral
-"Panduan React","Video cukup informatif tapi tidak terlalu menarik.",neutral
-"Vlog Kuliner Jakarta","Video standar, cukup menyenangkan tapi tidak luar biasa.",neutral
-"Mukbang Pizza","Video cukup biasa, tidak terlalu menghibur atau membosankan.",neutral
-"Tutorial Figma","Video lumayan, materi cukup jelas tapi tidak menonjol.",neutral
-"Belajar PHP","Materi cukup standar, cukup membantu pemula.",neutral
-"Panduan Node.js","Video biasa, penjelasan cukup jelas tapi tidak menonjol.",neutral
-"Vlog Pantai","Konten standar, cukup menyenangkan tapi tidak spesial.",neutral
-"Mukbang Ayam Goreng","Video biasa, tidak terlalu menarik tapi tidak buruk.",neutral
-"Tutorial Illustrator","Materi cukup jelas, cocok untuk belajar tapi tidak luar biasa.",neutral
-"Belajar JavaScript","Video standar, cukup membantu tapi tidak menonjol.",neutral
-"Panduan Machine Learning","Video biasa, cukup jelas tapi tidak istimewa.",neutral
-"Vlog Alam","Konten biasa saja, pemandangan menarik tapi standar.",neutral
-"Mukbang Burger","Video lumayan, cukup menghibur tapi tidak spesial.",neutral
-"Tutorial SEO","Video standar, materi cukup membantu tapi biasa saja.",neutral
-"Belajar R Programming","Materi cukup jelas, membantu tapi tidak menonjol.",neutral
-"Panduan Python Flask","Video lumayan, cukup mudah diikuti tapi standar.",neutral
-"Vlog Gunung","Konten biasa, pemandangan cukup menarik tapi tidak luar biasa.",neutral
-"Mukbang Kue","Video standar, cukup lucu tapi tidak spesial.",neutral
-"Tutorial Node.js Lanjutan","Video cukup jelas, membantu tapi biasa saja.",neutral
-"Belajar Statistik","Materi standar, cukup membantu pemula tapi tidak menonjol.",neutral
-"Panduan React Hooks","Video biasa saja, cukup jelas tapi tidak istimewa.",neutral
-"Vlog Kota Semarang","Konten standar, aktivitas sehari-hari biasa.",neutral
-"Mukbang Roti","Video biasa, cukup menghibur tapi tidak spesial.",neutral
-"Tutorial Canva","Materi cukup jelas, mudah diikuti tapi biasa saja.",neutral
-"Belajar CSS Lanjutan","Video standar, cukup membantu tapi tidak menonjol.",neutral
-"Panduan Java Spring","Video biasa, materi cukup jelas tapi tidak spesial.",neutral
-"Vlog Kuliner Malang","Konten biasa saja, cukup menyenangkan tapi tidak luar biasa.",neutral
-"Mukbang Ice Cream","Video lumayan, cukup lucu tapi standar.",neutral
-"Tutorial GitHub","Materi standar, cukup membantu tapi tidak menonjol.",neutral
-"Belajar Fisika","Video biasa, cukup jelas tapi tidak luar biasa.",neutral
-"Panduan SQL","Materi cukup standar, cukup membantu tapi biasa saja.",neutral
-"Vlog Kota Surabaya","Konten biasa, cukup menarik tapi tidak spesial.",neutral
-"Mukbang Seafood","Video lumayan, cukup menghibur tapi biasa saja.",neutral
-"Tutorial Python GUI","Materi cukup jelas, membantu tapi tidak luar biasa.",neutral
-"Belajar Machine Learning","Video standar, cukup membantu untuk belajar tapi biasa saja.",neutral
-"Panduan Bahasa Jepang","Video biasa, cukup jelas tapi tidak menonjol.",neutral
-"Vlog Pantai Lombok","Konten standar, cukup menyenangkan tapi biasa saja.",neutral
-"Mukbang Ayam Bakar","Video lumayan, cukup menghibur tapi standar.",neutral
-"Tutorial Matematika Dasar","Materi cukup jelas, membantu tapi biasa saja.",neutral
-"Belajar Biologi","Video standar, cukup informatif tapi tidak luar biasa.",neutral
-"Panduan Fisika Lanjutan","Materi biasa, cukup jelas tapi tidak spesial.",neutral
-"Vlog Gunung Merbabu","Konten biasa, cukup menyenangkan tapi tidak luar biasa.",neutral
-"Mukbang Nasi Goreng","Video standar, cukup menghibur tapi biasa saja.",neutral
-"Tutorial R Programming","Materi cukup jelas, membantu tapi tidak menonjol.",neutral
-"Belajar Bahasa Korea","Video biasa, cukup informatif tapi tidak luar biasa.",neutral
-"Panduan CSS","Video standar, cukup mudah diikuti tapi biasa saja.",neutral
-"Vlog Kuliner Solo","Konten biasa, cukup menghibur tapi tidak menonjol.",neutral
-"Video Kekerasan","Menampilkan adegan menegangkan dan membuat takut.",negative
-"Drama Remaja","Cerita membingungkan, sulit dipahami, membuat frustrasi.",negative
-"Mukbang Ekstrem","Konten menjijikkan dan tidak nyaman ditonton.",negative
-"Video Menakutkan","Materi membuat cemas dan tidak menyenangkan.",negative
-"Vlog Kota Rusuh","Aktivitas sehari-hari menegangkan dan membuat khawatir.",negative
-"Tutorial Rumit","Materi sulit dipahami, membingungkan dan melelahkan.",negative
-"Belajar Matematika Sulit","Video sangat kompleks, membuat frustrasi pemula.",negative
-"Drama Kekerasan","Cerita penuh konflik, membuat tidak nyaman.",negative
-"Mukbang Pedas Ekstrem","Konten menyakitkan dan tidak menyenangkan.",negative
-"Video Kontroversial","Materi memancing emosi negatif, membuat cemas.",negative
-"Vlog Horor","Suasana menyeramkan, membuat takut dan tidak nyaman.",negative
-"Tutorial Kompleks","Materi sulit dimengerti, membingungkan pemula.",negative
-"Belajar Fisika Sulit","Penjelasan rumit, membuat frustrasi pemirsa.",negative
-"Drama Remaja Rumit","Cerita membingungkan dan membuat kesal.",negative
-"Mukbang Tidak Layak","Konten menjijikkan dan membuat tidak nyaman.",negative
-"Video Kekerasan Ekstrem","Menampilkan adegan mengerikan, membuat takut.",negative
-"Vlog Kota Gelap","Suasana menakutkan dan membingungkan.",negative
-"Tutorial Rumit dan Panjang","Materi terlalu panjang, sulit diikuti.",negative
-"Belajar Kimia Sulit","Video membingungkan dan membuat frustrasi.",negative
-"Drama Memicu Emosi Negatif","Cerita memancing rasa marah atau sedih.",negative
-"Mukbang Berbahaya","Konten tidak aman dan membuat cemas.",negative
-"Video Menakutkan Ekstrem","Adegan sangat menegangkan dan mengganggu.",negative
-"Vlog Kota Kacau","Konten membingungkan dan membuat tidak nyaman.",negative
-"Tutorial Membosankan","Materi membosankan, membuat pemirsa bosan.",negative
-"Belajar Bahasa Sulit","Video sulit diikuti, membingungkan pemula.",negative
-"Drama Menyebalkan","Cerita membuat frustrasi dan kesal.",negative
-"Mukbang Menjijikkan","Konten tidak enak ditonton, membuat tidak nyaman.",negative
-"Video Kontroversial Panjang","Materi memancing emosi negatif, membosankan.",negative
-"Vlog Horor Ekstrem","Suasana sangat menakutkan dan tidak nyaman.",negative
-"Tutorial Terlalu Rumit","Materi membingungkan, sulit diikuti.",negative
-"Belajar Matematika Rumit","Video membingungkan, membuat frustrasi.",negative
-"Drama Remaja Negatif","Cerita menyebalkan dan membingungkan.",negative
-"Mukbang Ekstrem Tidak Layak","Konten menjijikkan dan membuat cemas.",negative
-"Video Kekerasan Panjang","Menampilkan adegan mengerikan, membuat takut.",negative
-"Vlog Kota Gelap dan Menakutkan","Suasana menyeramkan, membuat khawatir.",negative
-"Tutorial Rumit Membosankan","Materi panjang, sulit diikuti, membosankan.",negative
-"Belajar Fisika Kompleks","Video sulit dipahami, membuat frustrasi.",negative
-"Drama Membingungkan","Cerita tidak jelas dan membuat kesal.",negative
-"Mukbang Pedas Tidak Aman","Konten menyakitkan dan tidak menyenangkan.",negative
-"Video Seram","Adegan menakutkan dan tidak nyaman ditonton.",negative
-"Vlog Kota Kacau dan Gelap","Konten membingungkan dan membuat tidak nyaman.",negative
-"Tutorial Membosankan dan Rumit","Materi membingungkan dan membuat bosan.",negative
-"Belajar Bahasa Rumit","Video sulit diikuti, membuat frustrasi pemula.",negative
-"Drama Membosankan","Cerita membosankan dan membingungkan.",negative
-"Mukbang Menjijikkan Ekstrem","Konten menjijikkan dan tidak nyaman.",negative
-"Video Kontroversial Mengganggu","Materi memancing emosi negatif dan stres.",negative
-"Vlog Horor Menakutkan","Suasana sangat menyeramkan, membuat takut.",negative
-"Tutorial Rumit Sulit Dimengerti","Materi sulit diikuti, membingungkan.",negative
-"Belajar Matematika Menyulitkan","Video membingungkan, membuat frustrasi.",negative
-"Drama Remaja Membingungkan","Cerita sulit diikuti dan menyebalkan.",negative
-"Mukbang Berbahaya dan Menjijikkan","Konten ekstrem, tidak nyaman ditonton.",negative
-"Video Kekerasan Ekstrem Panjang","Adegan mengerikan dan menakutkan.",negative
-"Vlog Kota Gelap dan Menakutkan Ekstrem","Konten sangat menyeramkan dan membingungkan.",negative
-"Tutorial Panjang dan Rumit","Materi sulit diikuti dan membosankan.",negative
-"Belajar Fisika Rumit dan Sulit","Video membingungkan dan membuat frustrasi.",
+title,description,label,category
+Belajar Python Dasar,Video ini mengajarkan dasar Python dengan mudah dan menyenangkan.,positive,Teknologi
+Tutorial Excel,"Penjelasan jelas dan mudah dipahami, sangat membantu pemula.",positive,Teknologi
+Vlog Liburan Bali,"Pemandangan indah, pengalaman menyenangkan dan seru!",positive,Vlog
+Mukbang Ramen,"Video lucu dan menghibur, saya sangat menikmatinya!",positive,Kuliner
+Edukasi Biologi,"Penjelasan mudah dimengerti, menyenangkan dan informatif.",positive,Edukasi
+Panduan React,"Video lengkap dan mudah dipahami, membuat belajar React jadi menyenangkan.",positive,Teknologi
+Tutorial JavaScript,"Materi lengkap, mudah diikuti, cocok untuk pemula.",positive,Teknologi
+Panduan Machine Learning,Penjelasan mudah dipahami dan menyenangkan.,positive,Teknologi
+Belajar SQL,Materi jelas dan sangat membantu proses belajar.,positive,Teknologi
+Video Matematika,Video sangat bermanfaat dan mudah dipahami.,positive,Edukasi
+Vlog Kota Yogyakarta,"Suasana menyenangkan, seru, dan informatif.",positive,Vlog
+Mukbang Pizza,Konten menghibur dan membuat senang menonton.,positive,Kuliner
+Tutorial CSS,"Video mudah dimengerti, sangat membantu pemula.",positive,Teknologi
+Belajar Java Dasar,"Penjelasan jelas dan menyenangkan, cocok untuk belajar.",positive,Teknologi
+Edukasi Fisika,"Video mudah diikuti, materi jelas dan menyenangkan.",positive,Edukasi
+Panduan Git,"Video bermanfaat, sangat membantu memahami version control.",positive,Teknologi
+Belajar Bahasa Inggris,Materi mudah dipahami dan menyenangkan.,positive,Edukasi
+Vlog Kuliner Bandung,"Menyenangkan, menghibur, dan sangat menarik.",positive,Kuliner
+Tutorial Photoshop,"Penjelasan mudah, konten menarik dan membantu.",positive,Teknologi
+Video Kesehatan,"Materi informatif dan mudah dimengerti, menyenangkan.",positive,Umum
+Belajar Python Lanjutan,Video mengajarkan konsep lanjutan dengan cara mudah dimengerti.,positive,Teknologi
+Mukbang Sushi,"Sangat menyenangkan dan lucu, membuat senang menonton.",positive,Kuliner
+Vlog Travel Lombok,"Konten menyenangkan dan informatif, pengalaman seru.",positive,Vlog
+Tutorial Word,Materi jelas dan sangat membantu pemula.,positive,Teknologi
+Panduan Statistik,"Video mudah dimengerti, konten menarik dan bermanfaat.",positive,Edukasi
+Video Sejarah,"Materi jelas dan mudah dipahami, pengalaman belajar menyenangkan.",positive,Vlog
+Belajar Ekonomi,Penjelasan mudah dipahami dan bermanfaat untuk pemula.,positive,Edukasi
+Mukbang Burger,"Seru, lucu, dan sangat menghibur.",positive,Kuliner
+Vlog Alam,"Konten menyenangkan, pengalaman menarik, sangat seru.",positive,Vlog
+Tutorial Bahasa Jepang,"Video jelas dan mudah dimengerti, bermanfaat.",positive,Edukasi
+Edukasi Kimia,Materi mudah diikuti dan menyenangkan untuk belajar.,positive,Edukasi
+Belajar Data Science,Penjelasan menyenangkan dan mudah dimengerti.,positive,Teknologi
+Video Musik,"Konten menyenangkan dan menghibur, sangat cocok untuk santai.",positive,Teknologi
+Vlog Kuliner Jakarta,"Video seru dan lucu, sangat menghibur.",positive,Kuliner
+Mukbang Nasi Padang,Menyenangkan dan membuat senang menonton.,positive,Kuliner
+Tutorial Figma,"Materi jelas, mudah diikuti, cocok untuk pemula.",positive,Teknologi
+Belajar CSS Lanjutan,"Video jelas dan menyenangkan, sangat membantu belajar.",positive,Teknologi
+Panduan React Hooks,Video membantu memahami konsep dengan cara mudah.,positive,Teknologi
+Belajar Algoritma,"Konten menarik dan menyenangkan, sangat membantu belajar.",positive,Edukasi
+Vlog Pantai,"Konten menyenangkan, pemandangan indah, pengalaman seru.",positive,Teknologi
+Mukbang Ayam Goreng,"Konten lucu, menyenangkan, menghibur.",positive,Kuliner
+Edukasi Matematika,"Materi mudah dipahami, sangat membantu belajar.",positive,Edukasi
+Tutorial Illustrator,"Video jelas, menyenangkan, mudah diikuti.",positive,Teknologi
+Belajar Java Lanjutan,"Materi jelas, mudah dipahami, menyenangkan untuk belajar.",positive,Teknologi
+Vlog Hiking,"Menyenangkan, pemandangan indah, pengalaman seru.",positive,Vlog
+Mukbang Kue,"Konten menghibur dan menyenangkan, sangat lucu.",positive,Kuliner
+Video Motivasi,Sangat inspiratif dan menyenangkan untuk ditonton.,positive,Umum
+Tutorial SEO,"Video bermanfaat, mudah dimengerti, sangat membantu.",positive,Teknologi
+Belajar Statistik,"Materi jelas, mudah diikuti, konten menyenangkan.",positive,Edukasi
+Vlog Kuliner Malang,"Video menyenangkan, sangat menghibur dan lucu.",positive,Kuliner
+Mukbang Roti,"Menyenangkan dan lucu, konten menghibur.",positive,Kuliner
+Tutorial JavaScript Lanjutan,"Materi jelas dan mudah dimengerti, sangat bermanfaat.",positive,Teknologi
+Panduan Excel,Video membantu memahami materi dengan cara mudah dan menyenangkan.,positive,Teknologi
+Belajar Python GUI,"Penjelasan mudah dan menyenangkan, konten bermanfaat.",positive,Teknologi
+Vlog Alam Bogor,"Menyenangkan, pemandangan indah, pengalaman seru dan menghibur.",positive,Vlog
+Mukbang Seafood,"Konten menyenangkan, sangat menghibur, lucu.",positive,Kuliner
+Edukasi Bahasa Korea,"Materi jelas, mudah dimengerti, sangat menyenangkan.",positive,Edukasi
+Tutorial Canva,"Video mudah dipahami, sangat membantu dan menyenangkan.",positive,Teknologi
+Belajar PHP,"Penjelasan mudah, konten menyenangkan dan bermanfaat.",positive,Teknologi
+Vlog Kota Bandung,"Menyenangkan, pengalaman seru, konten menarik.",positive,Vlog
+Mukbang Ice Cream,"Sangat lucu, menghibur, dan menyenangkan.",positive,Kuliner
+Tutorial Node.js,"Materi jelas, mudah dipahami, konten menyenangkan dan bermanfaat.",positive,Teknologi
+Panduan Python Flask,"Video mudah diikuti, menyenangkan dan membantu belajar.",positive,Teknologi
+Belajar R Programming,"Penjelasan jelas, mudah dimengerti, menyenangkan.",positive,Edukasi
+Video Kuliner,"Konten lucu, menyenangkan, sangat menghibur.",positive,Kuliner
+Vlog Pantai Bali,"Menyenangkan, pemandangan indah, pengalaman seru.",positive,Teknologi
+Mukbang Ayam Bakar,"Konten menghibur dan menyenangkan, lucu.",positive,Kuliner
+Tutorial Data Science Lanjutan,"Materi jelas, mudah dipahami, sangat bermanfaat.",positive,Teknologi
+Panduan Java Spring,"Video jelas dan menyenangkan, sangat membantu belajar.",positive,Teknologi
+Belajar React Native,"Penjelasan mudah, menyenangkan, dan bermanfaat.",positive,Teknologi
+Vlog Gunung,"Menyenangkan, pemandangan indah, pengalaman seru.",positive,Vlog
+Mukbang Burger Cheese,"Konten lucu, menyenangkan, menghibur.",positive,Kuliner
+Edukasi Sejarah,"Materi jelas, menyenangkan, dan sangat informatif.",positive,Edukasi
+Tutorial GitHub,"Video mudah diikuti, menyenangkan, sangat membantu.",positive,Teknologi
+Belajar CSS Lanjutan,"Penjelasan jelas, mudah dimengerti, menyenangkan.",positive,Teknologi
+Vlog Kota Yogyakarta,"Video biasa saja, memperlihatkan aktivitas sehari-hari.",neutral,Vlog
+Mukbang Nasi Padang,Video cukup informatif tapi tidak terlalu menarik.,neutral,Kuliner
+Tutorial Word,"Materi standar, cukup jelas tapi tidak spesial.",neutral,Teknologi
+Panduan Fisika,"Penjelasan video biasa saja, cukup membantu tapi tidak luar biasa.",neutral,Edukasi
+Belajar Kimia,"Video lumayan, beberapa bagian cukup jelas tapi tidak semuanya.",neutral,Edukasi
+Video Sejarah,Materi cukup informatif tapi tidak ada yang istimewa.,neutral,Edukasi
+Tutorial Excel,"Materi cukup jelas, cocok untuk belajar tapi tidak menonjol.",neutral,Teknologi
+Belajar Bahasa Inggris,"Video standar, informasi dasar cukup membantu.",neutral,Edukasi
+Panduan Statistik,"Video biasa, cukup membantu memahami konsep dasar.",neutral,Edukasi
+Tutorial CSS,"Video lumayan, materi cukup jelas tapi tidak menarik.",neutral,Teknologi
+Vlog Kota Bandung,"Konten biasa, hanya merekam aktivitas harian.",neutral,Vlog
+Mukbang Ramen,"Video biasa, cukup menghibur tapi tidak luar biasa.",neutral,Kuliner
+Tutorial Java,"Materi cukup standar, mudah diikuti tapi tidak spesial.",neutral,Teknologi
+Belajar Python,"Video biasa saja, cukup membantu untuk pemula.",neutral,Teknologi
+Panduan React,Video cukup informatif tapi tidak terlalu menarik.,neutral,Teknologi
+Vlog Kuliner Jakarta,"Video standar, cukup menyenangkan tapi tidak luar biasa.",neutral,Kuliner
+Mukbang Pizza,"Video cukup biasa, tidak terlalu menghibur atau membosankan.",neutral,Kuliner
+Tutorial Figma,"Video lumayan, materi cukup jelas tapi tidak menonjol.",neutral,Teknologi
+Belajar PHP,"Materi cukup standar, cukup membantu pemula.",neutral,Teknologi
+Panduan Node.js,"Video biasa, penjelasan cukup jelas tapi tidak menonjol.",neutral,Teknologi
+Vlog Pantai,"Konten standar, cukup menyenangkan tapi tidak spesial.",neutral,Teknologi
+Mukbang Ayam Goreng,"Video biasa, tidak terlalu menarik tapi tidak buruk.",neutral,Kuliner
+Tutorial Illustrator,"Materi cukup jelas, cocok untuk belajar tapi tidak luar biasa.",neutral,Teknologi
+Belajar JavaScript,"Video standar, cukup membantu tapi tidak menonjol.",neutral,Teknologi
+Panduan Machine Learning,"Video biasa, cukup jelas tapi tidak istimewa.",neutral,Teknologi
+Vlog Alam,"Konten biasa saja, pemandangan menarik tapi standar.",neutral,Vlog
+Mukbang Burger,"Video lumayan, cukup menghibur tapi tidak spesial.",neutral,Kuliner
+Tutorial SEO,"Video standar, materi cukup membantu tapi biasa saja.",neutral,Teknologi
+Belajar R Programming,"Materi cukup jelas, membantu tapi tidak menonjol.",neutral,Edukasi
+Panduan Python Flask,"Video lumayan, cukup mudah diikuti tapi standar.",neutral,Teknologi
+Vlog Gunung,"Konten biasa, pemandangan cukup menarik tapi tidak luar biasa.",neutral,Vlog
+Mukbang Kue,"Video standar, cukup lucu tapi tidak spesial.",neutral,Kuliner
+Tutorial Node.js Lanjutan,"Video cukup jelas, membantu tapi biasa saja.",neutral,Teknologi
+Belajar Statistik,"Materi standar, cukup membantu pemula tapi tidak menonjol.",neutral,Edukasi
+Panduan React Hooks,"Video biasa saja, cukup jelas tapi tidak istimewa.",neutral,Teknologi
+Vlog Kota Semarang,"Konten standar, aktivitas sehari-hari biasa.",neutral,Vlog
+Mukbang Roti,"Video biasa, cukup menghibur tapi tidak spesial.",neutral,Kuliner
+Tutorial Canva,"Materi cukup jelas, mudah diikuti tapi biasa saja.",neutral,Teknologi
+Belajar CSS Lanjutan,"Video standar, cukup membantu tapi tidak menonjol.",neutral,Teknologi
+Panduan Java Spring,"Video biasa, materi cukup jelas tapi tidak spesial.",neutral,Teknologi
+Vlog Kuliner Malang,"Konten biasa saja, cukup menyenangkan tapi tidak luar biasa.",neutral,Kuliner
+Mukbang Ice Cream,"Video lumayan, cukup lucu tapi standar.",neutral,Kuliner
+Tutorial GitHub,"Materi standar, cukup membantu tapi tidak menonjol.",neutral,Teknologi
+Belajar Fisika,"Video biasa, cukup jelas tapi tidak luar biasa.",neutral,Edukasi
+Panduan SQL,"Materi cukup standar, cukup membantu tapi biasa saja.",neutral,Teknologi
+Vlog Kota Surabaya,"Konten biasa, cukup menarik tapi tidak spesial.",neutral,Vlog
+Mukbang Seafood,"Video lumayan, cukup menghibur tapi biasa saja.",neutral,Kuliner
+Tutorial Python GUI,"Materi cukup jelas, membantu tapi tidak luar biasa.",neutral,Teknologi
+Belajar Machine Learning,"Video standar, cukup membantu untuk belajar tapi biasa saja.",neutral,Teknologi
+Panduan Bahasa Jepang,"Video biasa, cukup jelas tapi tidak menonjol.",neutral,Edukasi
+Vlog Pantai Lombok,"Konten standar, cukup menyenangkan tapi biasa saja.",neutral,Teknologi
+Mukbang Ayam Bakar,"Video lumayan, cukup menghibur tapi standar.",neutral,Kuliner
+Tutorial Matematika Dasar,"Materi cukup jelas, membantu tapi biasa saja.",neutral,Edukasi
+Belajar Biologi,"Video standar, cukup informatif tapi tidak luar biasa.",neutral,Edukasi
+Panduan Fisika Lanjutan,"Materi biasa, cukup jelas tapi tidak spesial.",neutral,Edukasi
+Vlog Gunung Merbabu,"Konten biasa, cukup menyenangkan tapi tidak luar biasa.",neutral,Vlog
+Mukbang Nasi Goreng,"Video standar, cukup menghibur tapi biasa saja.",neutral,Kuliner
+Tutorial R Programming,"Materi cukup jelas, membantu tapi tidak menonjol.",neutral,Edukasi
+Belajar Bahasa Korea,"Video biasa, cukup informatif tapi tidak luar biasa.",neutral,Edukasi
+Panduan CSS,"Video standar, cukup mudah diikuti tapi biasa saja.",neutral,Teknologi
+Vlog Kuliner Solo,"Konten biasa, cukup menghibur tapi tidak menonjol.",neutral,Kuliner
+Video Kekerasan,Menampilkan adegan menegangkan dan membuat takut.,negative,Hiburan
+Drama Remaja,"Cerita membingungkan, sulit dipahami, membuat frustrasi.",negative,Edukasi
+Mukbang Ekstrem,Konten menjijikkan dan tidak nyaman ditonton.,negative,Kuliner
+Video Menakutkan,Materi membuat cemas dan tidak menyenangkan.,negative,Kuliner
+Vlog Kota Rusuh,Aktivitas sehari-hari menegangkan dan membuat khawatir.,negative,Vlog
+Tutorial Rumit,"Materi sulit dipahami, membingungkan dan melelahkan.",negative,Edukasi
+Belajar Matematika Sulit,"Video sangat kompleks, membuat frustrasi pemula.",negative,Edukasi
+Drama Kekerasan,"Cerita penuh konflik, membuat tidak nyaman.",negative,Hiburan
+Mukbang Pedas Ekstrem,Konten menyakitkan dan tidak menyenangkan.,negative,Kuliner
+Video Kontroversial,"Materi memancing emosi negatif, membuat cemas.",negative,Umum
+Vlog Horor,"Suasana menyeramkan, membuat takut dan tidak nyaman.",negative,Vlog
+Tutorial Kompleks,"Materi sulit dimengerti, membingungkan pemula.",negative,Edukasi
+Belajar Fisika Sulit,"Penjelasan rumit, membuat frustrasi pemirsa.",negative,Edukasi
+Drama Remaja Rumit,Cerita membingungkan dan membuat kesal.,negative,Edukasi
+Mukbang Tidak Layak,Konten menjijikkan dan membuat tidak nyaman.,negative,Kuliner
+Video Kekerasan Ekstrem,"Menampilkan adegan mengerikan, membuat takut.",negative,Hiburan
+Vlog Kota Gelap,Suasana menakutkan dan membingungkan.,negative,Kuliner
+Tutorial Rumit dan Panjang,"Materi terlalu panjang, sulit diikuti.",negative,Edukasi
+Belajar Kimia Sulit,Video membingungkan dan membuat frustrasi.,negative,Edukasi
+Drama Memicu Emosi Negatif,Cerita memancing rasa marah atau sedih.,negative,Hiburan
+Mukbang Berbahaya,Konten tidak aman dan membuat cemas.,negative,Kuliner
+Video Menakutkan Ekstrem,Adegan sangat menegangkan dan mengganggu.,negative,Kuliner
+Vlog Kota Kacau,Konten membingungkan dan membuat tidak nyaman.,negative,Vlog
+Tutorial Membosankan,"Materi membosankan, membuat pemirsa bosan.",negative,Edukasi
+Belajar Bahasa Sulit,"Video sulit diikuti, membingungkan pemula.",negative,Edukasi
+Drama Menyebalkan,Cerita membuat frustrasi dan kesal.,negative,Hiburan
+Mukbang Menjijikkan,"Konten tidak enak ditonton, membuat tidak nyaman.",negative,Kuliner
+Video Kontroversial Panjang,"Materi memancing emosi negatif, membosankan.",negative,Umum
+Vlog Horor Ekstrem,Suasana sangat menakutkan dan tidak nyaman.,negative,Kuliner
+Tutorial Terlalu Rumit,"Materi membingungkan, sulit diikuti.",negative,Edukasi
+Belajar Matematika Rumit,"Video membingungkan, membuat frustrasi.",negative,Edukasi
+Drama Remaja Negatif,Cerita menyebalkan dan membingungkan.,negative,Hiburan
+Mukbang Ekstrem Tidak Layak,Konten menjijikkan dan membuat cemas.,negative,Kuliner
+Video Kekerasan Panjang,"Menampilkan adegan mengerikan, membuat takut.",negative,Hiburan
+Vlog Kota Gelap dan Menakutkan,"Suasana menyeramkan, membuat khawatir.",negative,Kuliner
+Tutorial Rumit Membosankan,"Materi panjang, sulit diikuti, membosankan.",negative,Edukasi
+Belajar Fisika Kompleks,"Video sulit dipahami, membuat frustrasi.",negative,Edukasi
+Drama Membingungkan,Cerita tidak jelas dan membuat kesal.,negative,Hiburan
+Mukbang Pedas Tidak Aman,Konten menyakitkan dan tidak menyenangkan.,negative,Kuliner
+Video Seram,Adegan menakutkan dan tidak nyaman ditonton.,negative,Kuliner
+Vlog Kota Kacau dan Gelap,Konten membingungkan dan membuat tidak nyaman.,negative,Vlog
+Tutorial Membosankan dan Rumit,Materi membingungkan dan membuat bosan.,negative,Edukasi
+Belajar Bahasa Rumit,"Video sulit diikuti, membuat frustrasi pemula.",negative,Edukasi
+Drama Membosankan,Cerita membosankan dan membingungkan.,negative,Hiburan
+Mukbang Menjijikkan Ekstrem,Konten menjijikkan dan tidak nyaman.,negative,Kuliner
+Video Kontroversial Mengganggu,Materi memancing emosi negatif dan stres.,negative,Umum
+Vlog Horor Menakutkan,"Suasana sangat menyeramkan, membuat takut.",negative,Kuliner
+Tutorial Rumit Sulit Dimengerti,"Materi sulit diikuti, membingungkan.",negative,Edukasi
+Belajar Matematika Menyulitkan,"Video membingungkan, membuat frustrasi.",negative,Edukasi
+Drama Remaja Membingungkan,Cerita sulit diikuti dan menyebalkan.,negative,Edukasi
+Mukbang Berbahaya dan Menjijikkan,"Konten ekstrem, tidak nyaman ditonton.",negative,Kuliner
+Video Kekerasan Ekstrem Panjang,Adegan mengerikan dan menakutkan.,negative,Kuliner
+Vlog Kota Gelap dan Menakutkan Ekstrem,Konten sangat menyeramkan dan membingungkan.,negative,Kuliner
+Tutorial Panjang dan Rumit,Materi sulit diikuti dan membosankan.,negative,Edukasi
+Belajar Fisika Rumit dan Sulit,Video membingungkan dan membuat frustrasi.,negative,Edukasi
+Pengalaman Buruk di Restoran X,"Pelayanannya sangat lambat, makanan tidak enak, dan suasananya kotor. Saya sangat kecewa dan tidak akan pernah kembali lagi. Sangat membuang waktu.",negative,Kuliner
+Review Hotel Buruk,"Kamar kotor, pelayanan tidak ramah, AC mati, sangat mengecewakan.",negative,Umum
+Kecewa Berat,"Barang rusak saat sampai, pengiriman lambat, seller tidak respon, tidak recommended.",negative,Teknologi
+Restoran Tidak Enak,"Rasa makanan hambar, harga mahal, pelayan kasar, sangat tidak worth it.",negative,Kuliner
+Layanan Mengecewakan,"Customer service lambat, tidak membantu, buang-buang waktu saya.",negative,Umum
+Produk Gagal,"Kualitas barang sangat jelek, tidak sesuai deskripsi, penipuan.",negative,Teknologi
