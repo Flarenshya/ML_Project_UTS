@@ -42,7 +42,7 @@ def upload():
             upload_error = str(e)
             youtube_link = "https://youtube.com/failed_upload_placeholder"
 
-        n8n_webhook = "http://localhost:5678/webhook/send_notification"
+        n8n_webhook = os.getenv("N8N_WEBHOOK_URL", "http://localhost:5678/webhook/send_notification")
         payload = {
             "email": email,
             "title": title,
