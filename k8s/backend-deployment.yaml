@@ -21,6 +21,8 @@ spec:
         env:
         - name: FLASK_ENV
           value: "production"
+        - name: N8N_WEBHOOK_URL
+          value: "http://n8n-service:5678/webhook/send_notification"
         volumeMounts:
         - name: google-secret
           mountPath: /app/backend/client_secrets.json
