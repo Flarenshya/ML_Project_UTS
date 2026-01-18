@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: project-backend:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5000
+        env:
+        - name: FLASK_ENV
+          value: "production"
+        volumeMounts:
+        - name: google-secret
+          mountPath: /app/backend/client_secrets.json
+          subPath: client_secrets.json
+          readOnly: true
+      volumes:
+      - name: google-secret
+        secret:
+          secretName: google-oauth-secret

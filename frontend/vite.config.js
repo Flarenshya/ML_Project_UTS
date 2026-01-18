@@ -13,4 +13,10 @@ export default defineConfig({
       },
     }),
   ],
+  server: {
+    port: 5173,
+    proxy: {
+      '/upload': 'http://localhost:5000',
+    },
+  },
 })
