@@ -27,9 +27,9 @@
       ],
       "parameters": {
         "fromEmail": "flarenshya@gmail.com",
-        "toEmail": "={{ $json[\"email\"] }}",
-        "subject": "Video \"{{$json[\"title\"]}}\" Has Been Uploaded!",
-        "text": "Hello,\n\nYour video titled \"{{$json[\"title\"]}}\" has been uploaded to YouTube.\nLink: {{$json[\"youtube_link\"]}}\nSentiment: {{$json[\"sentiment\"]}}\n\nThank you for using SmartUploader.\n"
+        "toEmail": "={{ $json.body.email }}",
+        "subject": "Video \"{{ $json.body.title }}\" Has Been Uploaded!",
+        "text": "Hello,\n\nYour video titled \"{{ $json.body.title }}\" has been uploaded to YouTube.\nLink: {{ $json.body.youtube_link }}\nSentiment: {{ $json.body.sentiment }}\nConfidence: {{ $json.body.confidence }}\nCategory: {{ $json.body.category }}\n\nThank you for using SmartUploader.\n"
       },
       "credentials": {
         "smtp": {
