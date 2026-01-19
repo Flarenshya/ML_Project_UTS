@@ -15,7 +15,7 @@ spec:
       containers:
       - name: backend
         image: project-backend:latest
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Never
         ports:
         - containerPort: 5000
         env:
@@ -28,7 +28,14 @@ spec:
           mountPath: /app/backend/client_secrets.json
           subPath: client_secrets.json
           readOnly: true
+        - name: google-token
+          mountPath: /app/backend/token.pickle
+          subPath: token.pickle
+          readOnly: true
       volumes:
       - name: google-secret
         secret:
           secretName: google-oauth-secret
+      - name: google-token
+        secret:
+          secretName: google-token-secret
