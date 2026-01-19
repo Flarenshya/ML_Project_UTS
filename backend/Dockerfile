@@ -15,4 +15,4 @@ ENV PYTHONPATH=/app
 
 EXPOSE 5000
 
-CMD ["gunicorn", "-w", "1", "-b", "0.0.0.0:5000", "backend.app:app"]
+CMD ["gunicorn", "-w", "1", "--timeout", "600", "-b", "0.0.0.0:5000", "backend.app:app"]

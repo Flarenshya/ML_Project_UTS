@@ -1,14 +1,51 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, redirect, session, url_for
 from backend.utils.ml_model import SentimentModel
-from backend.utils.youtube import upload_video
+from backend.utils.youtube import upload_video, get_flow, credentials_to_dict, dict_to_credentials
 import os
 import requests
+import uuid
 
 UPLOAD_FOLDER = "uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 sentiment_model = SentimentModel()
 routes = Blueprint('routes', __name__)
+
+# In-memory storage untuk credentials (sederhana untuk single instance)
+# Format: { 'session_id': credentials_dict }
+USER_CREDENTIALS = {} 
+
+@routes.route('/auth/url')
+def auth_url():
+    """Generate link login Google"""
+    flow = get_flow()
+    authorization_url, state = flow.authorization_url(
+        access_type='offline',
+        include_granted_scopes='true'
+    )
+    # Simpan state di session jika perlu validasi CSRF
+    return jsonify({"url": authorization_url})
+
+@routes.route('/auth/callback')
+def auth_callback():
+    """Callback dari Google setelah user login"""
+    code = request.args.get('code')
+    if not code:
+        return "Missing code", 400
+    
+    try:
+        flow = get_flow()
+        flow.fetch_token(code=code)
+        credentials = flow.credentials
+        
+        # Simpan credentials ke in-memory store dengan ID unik
+        session_id = str(uuid.uuid4())
+        USER_CREDENTIALS[session_id] = credentials_to_dict(credentials)
+        
+        # Redirect kembali ke Frontend dengan token
+        return redirect(f"http://localhost:30080?token={session_id}")
+    except Exception as e:
+        return f"Auth Error: {str(e)}", 500
 
 @routes.route('/upload', methods=['POST'])
 def upload():
@@ -19,6 +56,15 @@ def upload():
     title = request.form.get('title', '')
     description = request.form.get('description', '')
     email = request.form.get('email', '')
+    token = request.form.get('token', '')
+
+    # Validasi Login
+    if not token or token not in USER_CREDENTIALS:
+        return jsonify({"error": "Unauthorized. Please connect YouTube account first."}), 401
+    
+    # Ambil credentials user
+    creds_dict = USER_CREDENTIALS[token]
+    credentials = dict_to_credentials(creds_dict)
 
     video_path = os.path.join(UPLOAD_FOLDER, video.filename)
     video.save(video_path)
@@ -35,7 +81,8 @@ def upload():
         upload_error = None
 
         try:
-            yt_data = upload_video(video_path, title, description)
+            # Upload menggunakan credentials user
+            yt_data = upload_video(credentials, video_path, title, description)
             youtube_link = yt_data["url"]
         except Exception as e:
             print("❌ YouTube Upload Error (Skipping but continuing):", e)
