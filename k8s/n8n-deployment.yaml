@@ -31,4 +31,5 @@ spec:
           mountPath: /home/node/.n8n
       volumes:
       - name: n8n-data
-        emptyDir: {}
+        persistentVolumeClaim:
+          claimName: n8n-pvc
