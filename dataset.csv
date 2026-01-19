@@ -196,3 +196,53 @@ Kecewa Berat,"Barang rusak saat sampai, pengiriman lambat, seller tidak respon, 
 Restoran Tidak Enak,"Rasa makanan hambar, harga mahal, pelayan kasar, sangat tidak worth it.",negative,Kuliner
 Layanan Mengecewakan,"Customer service lambat, tidak membantu, buang-buang waktu saya.",negative,Umum
 Produk Gagal,"Kualitas barang sangat jelek, tidak sesuai deskripsi, penipuan.",negative,Teknologi
+Pembelajaran React,"Video pembelajaran React yang sangat membantu, mudah dipahami dan menyenangkan.",positive,Teknologi
+Pembelajaran JavaScript,"Tutorial JavaScript lengkap dan jelas, cocok untuk pemula yang baru belajar.",positive,Teknologi
+Pembelajaran Python,"Materi Python disajikan dengan baik, sangat bermanfaat untuk belajar coding.",positive,Teknologi
+Pembelajaran Web Development,"Kursus web development yang komprehensif dan mudah diikuti, sangat recommended.",positive,Teknologi
+Pembelajaran Machine Learning,"Penjelasan ML yang mudah dipahami, sangat membantu memahami konsep dasar.",positive,Teknologi
+Pembelajaran Data Science,"Video data science yang informatif dan menyenangkan untuk ditonton.",positive,Teknologi
+Pembelajaran Mobile Development,"Tutorial mobile dev yang lengkap, sangat membantu untuk belajar.",positive,Teknologi
+Pembelajaran Database,"Materi database disajikan dengan jelas, mudah dipahami pemula.",positive,Teknologi
+Pembelajaran API,"Tutorial API yang sangat bermanfaat dan mudah diikuti.",positive,Teknologi
+Pembelajaran Cloud Computing,"Video cloud computing yang informatif dan menyenangkan.",positive,Teknologi
+Tutorial Pemrograman,"Panduan pemrograman yang sangat membantu dan mudah dipahami.",positive,Teknologi
+Tutorial Coding,"Video tutorial coding yang menyenangkan dan edukatif.",positive,Teknologi
+Tutorial Programming,"Materi programming lengkap dan mudah diikuti, sangat bermanfaat.",positive,Teknologi
+Belajar Coding,"Video belajar coding yang seru dan mudah dipahami.",positive,Teknologi
+Belajar Pemrograman,"Tutorial pemrograman yang sangat membantu untuk pemula.",positive,Teknologi
+Kelas Online Programming,"Kelas online programming yang lengkap dan menyenangkan.",positive,Edukasi
+Kursus Web,"Kursus web development yang sangat bermanfaat dan mudah diikuti.",positive,Teknologi
+Edukasi Teknologi,"Video edukasi teknologi yang informatif dan menyenangkan.",positive,Edukasi
+Edukasi Coding,"Materi coding yang disajikan dengan baik, sangat membantu belajar.",positive,Edukasi
+Edukasi Programming,"Tutorial programming yang lengkap dan mudah dipahami.",positive,Edukasi
+Belajar Online,"Platform belajar online yang sangat membantu dan menyenangkan.",positive,Edukasi
+Kelas Pemrograman,"Kelas pemrograman yang informatif dan mudah diikuti.",positive,Edukasi
+Tutorial Belajar,"Video tutorial belajar yang sangat bermanfaat untuk pemula.",positive,Edukasi
+Panduan Belajar,"Panduan belajar yang lengkap dan mudah dipahami.",positive,Edukasi
+Materi Pembelajaran,"Materi pembelajaran yang disajikan dengan baik dan menyenangkan.",positive,Edukasi
+Video Edukatif,"Video edukatif yang sangat informatif dan mudah dimengerti.",positive,Edukasi
+Konten Edukasi,"Konten edukasi berkualitas yang sangat membantu belajar.",positive,Edukasi
+Video Tutorial,"Video tutorial yang lengkap dan mudah diikuti, sangat recommended.",positive,Teknologi
+Pembelajaran Dasar,"Materi pembelajaran dasar yang sangat membantu untuk pemula.",positive,Edukasi
+Berita Pembunuhan,"Berita tentang kasus pembunuhan yang mengejutkan dan mengerikan.",negative,Berita
+Kasus Pembunuhan,"Laporan lengkap tentang kasus pembunuhan sadis yang terjadi.",negative,Berita
+Pembunuhan di Desa,"Berita pembunuhan yang terjadi di desa terpencil, sangat menyedihkan.",negative,Berita
+Tragedi Pembunuhan,"Tragedi pembunuhan berantai yang menghebohkan masyarakat.",negative,Berita
+Berita Kriminal,"Berita kriminal tentang perampokan dan kekerasan yang terjadi.",negative,Berita
+Kasus Kriminal,"Laporan kasus kriminal yang melibatkan kekerasan dan intimidasi.",negative,Berita
+Berita Kecelakaan,"Berita kecelakaan lalu lintas yang menelan korban jiwa.",negative,Berita
+Tragedi Kecelakaan,"Tragedi kecelakaan pesawat yang menewaskan banyak penumpang.",negative,Berita
+Berita Bencana,"Berita bencana alam yang menyebabkan kerusakan parah.",negative,Berita
+Bencana Alam,"Laporan bencana alam gempa bumi yang merusak banyak rumah.",negative,Berita
+Berita Perampokan,"Berita perampokan bersenjata yang membuat warga ketakutan.",negative,Berita
+Berita Penculikan,"Kasus penculikan anak yang membuat orang tua khawatir.",negative,Berita
+Berita Korupsi,"Laporan korupsi pejabat yang merugikan negara miliaran rupiah.",negative,Berita
+Skandal Politik,"Skandal politik yang melibatkan pejabat tinggi negara.",negative,Berita
+Berita Perang,"Berita perang yang menunjukkan kerusakan dan korban jiwa.",negative,Berita
+Konflik Bersenjata,"Laporan konflik bersenjata yang menelan banyak korban.",negative,Berita
+Berita Terorisme,"Berita serangan teror yang mengejutkan dan menakutkan.",negative,Berita
+Aksi Teror,"Laporan aksi teror yang membuat masyarakat trauma.",negative,Berita
+Berita Kebakaran,"Berita kebakaran besar yang menghanguskan pemukiman warga.",negative,Berita
+Tragedi Kebakaran,"Tragedi kebakaran pabrik yang menyebabkan korban luka-luka.",negative,Berita
+
