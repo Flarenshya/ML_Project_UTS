@@ -26,7 +26,7 @@
         300
       ],
       "parameters": {
-        "fromEmail": "smilingwoofie@gmail.com",
+        "fromEmail": "flarenshya@gmail.com",
         "toEmail": "={{ $json[\"email\"] }}",
         "subject": "Video \"{{$json[\"title\"]}}\" Has Been Uploaded!",
         "text": "Hello,\n\nYour video titled \"{{$json[\"title\"]}}\" has been uploaded to YouTube.\nLink: {{$json[\"youtube_link\"]}}\nSentiment: {{$json[\"sentiment\"]}}\n\nThank you for using SmartUploader.\n"

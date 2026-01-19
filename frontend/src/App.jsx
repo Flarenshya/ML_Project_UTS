@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 function App() {
@@ -12,6 +12,27 @@ function App() {
   const [category, setCategory] = useState(null);
   const [loading, setLoading] = useState(false);
   const [youtubeLink, setYoutubeLink] = useState("");
+  const [token, setToken] = useState("");
+
+  useEffect(() => {
+    // Cek apakah ada token di URL setelah login Google
+    const query = new URLSearchParams(window.location.search);
+    const tokenParams = query.get("token");
+    if (tokenParams) {
+      setToken(tokenParams);
+      // Bersihkan URL agar bersih
+      window.history.replaceState({}, document.title, "/");
+    }
+  }, []);
+
+  const handleConnectGoogle = async () => {
+    try {
+      const res = await axios.get("/auth/url");
+      window.location.href = res.data.url;
+    } catch (error) {
+      alert("Failed to get auth URL");
+    }
+  };
 
   // Validasi email
   const validateEmail = (email) => {
@@ -20,6 +41,11 @@ function App() {
   };
 
   const handleUpload = async () => {
+    if (!token) {
+      alert("Please connect your YouTube account first!");
+      return;
+    }
+
     // Validasi semua field
     if (!video || !title.trim() || !description.trim() || !email.trim()) {
       alert("Please fill in all fields and choose a video!");
@@ -43,6 +69,7 @@ function App() {
       formData.append("title", title);
       formData.append("description", description);
       formData.append("email", email);
+      formData.append("token", token);
 
       const res = await axios.post("/upload", formData, {
         headers: { "Content-Type": "multipart/form-data" },
@@ -56,7 +83,7 @@ function App() {
       alert("Video uploaded successfully!");
     } catch (error) {
       console.error(error);
-      alert("Something went wrong!");
+      alert(error.response?.data?.error || "Something went wrong!");
     } finally {
       setLoading(false);
     }
@@ -78,13 +105,29 @@ function App() {
           <p className="italic text-lg text-blue-300 mb-3">
             AutoVid Connect — upload once, share everywhere.
           </p>
-          <p className="text-gray-300 max-w-md leading-relaxed">
+          <p className="text-gray-300 max-w-md leading-relaxed mb-8">
             Automatically post your videos to YouTube and get instant notifications via WhatsApp and email when it’s done.
           </p>
+
+          {/* Connect Button */}
+          {!token ? (
+            <button
+              onClick={handleConnectGoogle}
+              className="bg-white text-black px-6 py-3 rounded-full font-bold flex items-center gap-3 hover:bg-gray-200 transition"
+            >
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png" className="w-6 h-6" alt="Google" />
+              Connect YouTube Account
+            </button>
+          ) : (
+            <div className="bg-green-600/20 text-green-400 px-6 py-3 rounded-full font-bold flex items-center gap-3 border border-green-500/50 w-fit">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+              Connected to YouTube
+            </div>
+          )}
         </div>
 
         {/* Right Section - Upload Form */}
-        <div className="bg-white text-black rounded-3xl shadow-2xl p-8 w-full max-w-md mx-auto">
+        <div className={`bg-white text-black rounded-3xl shadow-2xl p-8 w-full max-w-md mx-auto transition-opacity ${!token ? 'opacity-50 pointer-events-none grayscale' : ''}`}>
           <div className="flex items-center mb-5">
             <label className="bg-[#0040ff] text-white font-medium py-2 px-8 rounded-full cursor-pointer hover:bg-blue-700 transition">
               Choose File

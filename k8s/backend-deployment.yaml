@@ -23,6 +23,8 @@ spec:
           value: "production"
         - name: N8N_WEBHOOK_URL
           value: "http://n8n-service:5678/webhook/send_notification"
+        - name: OAUTH_REDIRECT_URI
+          value: "http://localhost:30080/auth/callback"
         volumeMounts:
         - name: google-secret
           mountPath: /app/backend/client_secrets.json
