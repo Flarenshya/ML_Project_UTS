@@ -1,163 +1,111 @@
 import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.pipeline import Pipeline
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
-from sklearn.ensemble import VotingClassifier
-from sklearn.linear_model import LogisticRegression
-from sklearn.svm import SVC
-from sklearn.neural_network import MLPClassifier
-import joblib
-import os
 import numpy as np
+import tensorflow as tf
+from tensorflow.keras.models import load_model
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+import pickle
+import os
+import re
 
-MODEL_FILE = "backend/sentiment_model.pkl"
-DATASET_FILE = "dataset.csv"
+# Configuration
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_DIR = os.path.join(BASE_DIR, "models")
+MAX_LEN = 100
 
 class SentimentModel:
     def __init__(self):
-        self.model = None
-        self.category_model = None # Initialize attribute
-
-        if not os.path.exists(DATASET_FILE):
-            raise FileNotFoundError(f"Dataset file not found: {DATASET_FILE}")
+        self.sentiment_model = None
+        self.category_model = None
+        self.tokenizer = None
+        self.sentiment_label_encoder = None
+        self.category_label_encoder = None
         
-        # Load Sentiment Model
-        if os.path.exists(MODEL_FILE):
-            try:
-                self.model = joblib.load(MODEL_FILE)
-            except:
-                self.train()
-        else:
-            self.train()
+        self.load_models()
 
-        # Load Category Model
-        CATEGORY_MODEL_FILE = "backend/category_model.pkl"
-        if os.path.exists(CATEGORY_MODEL_FILE):
-            try:
-                self.category_model = joblib.load(CATEGORY_MODEL_FILE)
-            except:
-                self.train_category_model()
-        else:
-            self.train_category_model()
+    def load_models(self):
+        try:
+            print("Loading Deep Learning models...")
+            # Load Models
+            self.sentiment_model = load_model(os.path.join(MODEL_DIR, "sentiment_dl_model.h5"))
+            self.category_model = load_model(os.path.join(MODEL_DIR, "category_dl_model.h5"))
+            
+            # Load Tokenizer (Shared or specific? Script saves separate ones, let's load specifically)
+            with open(os.path.join(MODEL_DIR, "sentiment_tokenizer.pickle"), 'rb') as handle:
+                self.tokenizer = pickle.load(handle)
+                
+            # Load Label Encoders
+            with open(os.path.join(MODEL_DIR, "sentiment_label_encoder.pickle"), 'rb') as handle:
+                self.sentiment_label_encoder = pickle.load(handle)
+                
+            with open(os.path.join(MODEL_DIR, "category_label_encoder.pickle"), 'rb') as handle:
+                self.category_label_encoder = pickle.load(handle)
+                
+            print("Models loaded successfully!")
+        except Exception as e:
+            print(f"Error loading models: {e}")
+            print("Ensure train_dl_models.py has been run successfully.")
 
-    def train_category_model(self):
-        print("Training category model...")
-        df = pd.read_csv(DATASET_FILE)
-        # Ensure category column exists
-        if 'category' not in df.columns:
-            print("Category column missing, skipping category training.")
-            return
-
-        df = df.dropna(subset=['title', 'description', 'category'])
-        df['text'] = df['title'].astype(str) + " " + df['description'].astype(str)
-
-        X_train, X_test, y_train, y_test = train_test_split(
-            df['text'], df['category'], test_size=0.2, random_state=42
-        )
-
-        # Deep Learning for Categorization (MLP)
-        mlp_category = MLPClassifier(hidden_layer_sizes=(64, 32), max_iter=500, activation='relu', solver='adam', random_state=42)
-
-        self.category_model = Pipeline([
-            ('tfidf', TfidfVectorizer(stop_words='english')),
-            ('mlp', mlp_category)
-        ])
-        
-        self.category_model.fit(X_train, y_train)
-        joblib.dump(self.category_model, "backend/category_model.pkl") 
-        print("Category model trained and saved.")
-
-    def train(self):
-
-        print("Training model...")
-        df = pd.read_csv(DATASET_FILE)
-        # 🔹 Hapus baris yang ada NaN di kolom penting
-        df = df.dropna(subset=['title', 'description', 'label'])
-
-        # 🔹 Gabungkan teks
-        df['text'] = df['title'].astype(str) + " " + df['description'].astype(str)
-
-        X_train, X_test, y_train, y_test = train_test_split(
-            df['text'], df['label'], test_size=0.2, random_state=42
-        )
-
-        # Ensemble Model: NB + Logistic Regression + SVM + Neural Network (Deep Learning)
-        clf1 = MultinomialNB()
-        clf2 = LogisticRegression(random_state=42, max_iter=1000)
-        clf3 = SVC(kernel='linear', probability=True, random_state=42)
-        
-        # Deep Learning Layer (Multi-Layer Perceptron)
-        clf4 = MLPClassifier(hidden_layer_sizes=(128, 64), max_iter=500, activation='relu', solver='adam', random_state=42)
-
-        voting_clf = VotingClassifier(
-            estimators=[
-                ('nb', clf1), 
-                ('lr', clf2), 
-                ('svc', clf3),
-                ('mlp_neural_network', clf4)
-            ],
-            voting='soft'
-        )
-
-        self.model = Pipeline([
-            ('tfidf', TfidfVectorizer(stop_words='english')),
-            ('clf', voting_clf)
-        ])
-        self.model.fit(X_train, y_train)
-
-        joblib.dump(self.model, MODEL_FILE)
-
-        y_pred = self.model.predict(X_test)
-        metrics = {
-            "accuracy": round(accuracy_score(y_test, y_pred) * 100, 2),
-            "precision": round(precision_score(y_test, y_pred, average='weighted') * 100, 2),
-            "recall": round(recall_score(y_test, y_pred, average='weighted') * 100, 2),
-            "f1_score": round(f1_score(y_test, y_pred, average='weighted') * 100, 2)
-        }
-
-        print("Training completed!")
-        print("Metrics:", metrics)
-        return metrics
+    def preprocess(self, text):
+        text = str(text).lower()
+        text = re.sub(r'[^a-zA-Z0-9\s]', '', text)
+        seq = self.tokenizer.texts_to_sequences([text])
+        padded = pad_sequences(seq, maxlen=MAX_LEN, padding='post', truncating='post')
+        return padded
 
     def extract_keywords(self, text, top_n=5):
-        try:
-            vectorizer = self.model.named_steps['tfidf']
-            feature_names = vectorizer.get_feature_names_out()
-            tfidf_matrix = vectorizer.transform([text])
-            sorted_items = sorted(
-                zip(vectorizer.get_feature_names_out(), tfidf_matrix.toarray()[0]),
-                key=lambda x: -x[1]
-            )
-            # Filter only words with non-zero score
-            keywords = [word for word, score in sorted_items if score > 0][:top_n]
-            return keywords
-        except Exception as e:
-            print("Error extracting keywords:", e)
-            return []
+        # Fallback simple keyword extraction since DL doesn't give feature importance easily
+        # We can implement a simple frequency based or just skip for now.
+        # Let's return capitalized words as a heuristic or simple frequency
+        words = re.findall(r'\w+', text.lower())
+        unique_words = list(set(words))
+        # Filter stop words (simple list)
+        stopwords = ['dan', 'yang', 'di', 'ke', 'dari', 'ini', 'itu', 'untuk', 'pada', 'adalah']
+        keywords = [w for w in unique_words if w not in stopwords and len(w) > 3]
+        return keywords[:top_n]
 
     def predict(self, title, description):
         text = str(title) + " " + str(description)
+        padded_text = self.preprocess(text)
         
-        # Predict Label
-        label = self.model.predict([text])[0]
-        
-        # Predict Probability (Confidence)
-        proba = self.model.predict_proba([text])[0]
-        confidence = round(max(proba) * 100, 2)
-        
-        # Extract Keywords
-        keywords = self.extract_keywords(text)
-
-        # Predict Category
-        category = "Umum" # Default category
-        if self.category_model: # Check if category model is loaded
-            category = self.category_model.predict([text])[0]
-
-        return {
-            "label": label,
-            "confidence": f"{confidence}%",
-            "keywords": keywords,
-            "category": category
+        result = {
+            "label": "Unknown",
+            "confidence": "0%",
+            "keywords": [],
+            "category": "Umum"
         }
+        
+        if self.sentiment_model:
+            # Predict Sentiment
+            pred_probs = self.sentiment_model.predict(padded_text)[0]
+            pred_idx = np.argmax(pred_probs)
+            confidence = float(pred_probs[pred_idx] * 100)
+            
+            if self.sentiment_label_encoder:
+                label = self.sentiment_label_encoder.inverse_transform([pred_idx])[0]
+            else:
+                label = str(pred_idx)
+                
+            result["label"] = label
+            result["confidence"] = f"{confidence:.2f}%"
+
+        if self.category_model:
+            # Predict Category
+            cat_probs = self.category_model.predict(padded_text)[0]
+            cat_idx = np.argmax(cat_probs)
+            
+            if self.category_label_encoder:
+                category = self.category_label_encoder.inverse_transform([cat_idx])[0]
+            else:
+                category = "Umum"
+            
+            result["category"] = category
+            
+        result["keywords"] = self.extract_keywords(text)
+        
+        return result
+
+    # Dummy train method specifically to avoid breaking old calls if any, 
+    # but strictly we rely on offline training now.
+    def train(self):
+        print("Training is now handled by ml_training/train_dl_models.py")
+

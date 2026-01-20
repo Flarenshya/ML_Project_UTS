@@ -1,0 +1,52 @@
+2026-01-20 09:04:33,659 - INFO - Starting Sentiment Training
+2026-01-20 09:04:33,669 - INFO - Sentiment Labels: ['negative', 'neutral', 'positive']
+2026-01-20 09:04:33,688 - ERROR - Error training sentiment model: local variable 'MaxPooling1D' referenced before assignment
+2026-01-20 09:04:33,689 - ERROR - Traceback (most recent call last):
+  File "D:\SEM 7\ML\Tugas_Project_UTS\ml_training\train_dl_models.py", line 95, in train_sentiment_model
+    model = create_hybrid_model(input_dim=MAX_WORDS, output_dim=num_classes, loss_fn='sparse_categorical_crossentropy')
+  File "D:\SEM 7\ML\Tugas_Project_UTS\ml_training\train_dl_models.py", line 39, in create_hybrid_model
+    MaxPooling1D(pool_size=2),
+UnboundLocalError: local variable 'MaxPooling1D' referenced before assignment
+
+2026-01-20 09:04:33,690 - INFO - Starting Category Training
+2026-01-20 09:04:33,695 - INFO - Category Labels: ['Berita', 'Edukasi', 'Hiburan', 'Kuliner', 'Teknologi', 'Umum', 'Vlog']
+2026-01-20 09:04:33,701 - ERROR - Error training category model: local variable 'MaxPooling1D' referenced before assignment
+2026-01-20 09:04:33,701 - ERROR - Traceback (most recent call last):
+  File "D:\SEM 7\ML\Tugas_Project_UTS\ml_training\train_dl_models.py", line 140, in train_category_model
+    model = create_hybrid_model(input_dim=MAX_WORDS, output_dim=num_classes, loss_fn='sparse_categorical_crossentropy')
+  File "D:\SEM 7\ML\Tugas_Project_UTS\ml_training\train_dl_models.py", line 39, in create_hybrid_model
+    MaxPooling1D(pool_size=2),
+UnboundLocalError: local variable 'MaxPooling1D' referenced before assignment
+
+2026-01-20 09:05:29,236 - INFO - Starting Sentiment Training
+2026-01-20 09:05:29,236 - ERROR - Error training sentiment model: name 'DATA_DIR' is not defined
+2026-01-20 09:05:29,237 - ERROR - Traceback (most recent call last):
+  File "D:\SEM 7\ML\Tugas_Project_UTS\ml_training\train_dl_models.py", line 43, in train_sentiment_model
+    df = pd.read_csv(f"{DATA_DIR}/final_sentiment_data.csv")
+NameError: name 'DATA_DIR' is not defined
+
+2026-01-20 09:05:29,238 - INFO - Starting Category Training
+2026-01-20 09:05:29,238 - ERROR - Error training category model: name 'DATA_DIR' is not defined
+2026-01-20 09:05:29,239 - ERROR - Traceback (most recent call last):
+  File "D:\SEM 7\ML\Tugas_Project_UTS\ml_training\train_dl_models.py", line 88, in train_category_model
+    df = pd.read_csv(f"{DATA_DIR}/final_category_data.csv")
+NameError: name 'DATA_DIR' is not defined
+
+2026-01-20 09:06:25,502 - INFO - Starting Sentiment Training
+2026-01-20 09:06:25,526 - INFO - Sentiment Labels: ['negative', 'neutral', 'positive']
+2026-01-20 09:06:35,713 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2026-01-20 09:06:35,855 - INFO - Sentiment Model Saved Successfully
+2026-01-20 09:06:35,856 - INFO - Starting Category Training
+2026-01-20 09:06:35,874 - INFO - Category Labels: ['Berita', 'Edukasi', 'Hiburan', 'Kuliner', 'Teknologi', 'Umum', 'Vlog']
+2026-01-20 09:06:46,247 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2026-01-20 09:06:46,310 - INFO - Category Model Saved Successfully
+2026-01-20 09:16:54,073 - INFO - Starting Sentiment Training
+2026-01-20 09:16:54,086 - INFO - Sentiment Labels: ['negative', 'neutral', 'positive']
+2026-01-20 09:17:01,230 - INFO - Graph saved to backend/utils/models/sentiment_model_history.png
+2026-01-20 09:17:01,230 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2026-01-20 09:17:01,343 - INFO - Sentiment Model Saved Successfully
+2026-01-20 09:17:01,344 - INFO - Starting Category Training
+2026-01-20 09:17:01,358 - INFO - Category Labels: ['Berita', 'Edukasi', 'Hiburan', 'Kuliner', 'Teknologi', 'Umum', 'Vlog']
+2026-01-20 09:17:08,123 - INFO - Graph saved to backend/utils/models/category_model_history.png
+2026-01-20 09:17:08,125 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2026-01-20 09:17:08,161 - INFO - Category Model Saved Successfully

@@ -106,7 +106,7 @@ function App() {
             AutoVid Connect — upload once, share everywhere.
           </p>
           <p className="text-gray-300 max-w-md leading-relaxed mb-8">
-            Automatically post your videos to YouTube and get instant notifications via WhatsApp and email when it’s done.
+            Automatically post your videos to YouTube and get instant notifications via email when it’s done.
           </p>
 
           {/* Connect Button */}

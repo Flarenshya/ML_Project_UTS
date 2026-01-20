@@ -1,0 +1,11 @@
+.venv
+.git
+__pycache__
+video.mp4
+uploads
+frontend
+k8s
+backend_logs.txt
+*.pkl
+*.h5
+ml_training
